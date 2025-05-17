@@ -1,0 +1,26 @@
+// Colors with RGB values for transparency
+$primary-rgb: 60, 130, 246; // #3c82f6
+$secondary-rgb: 30, 64, 175; // #1e40af
+$accent-rgb: 16, 185, 129; // #10b981
+$dark-bg-rgb: 17, 24, 39; // #111827
+
+:root {
+  --primary-color: #3c82f6;
+  --primary-color-rgb: #{$primary-rgb};
+  --secondary-color: #1e40af;
+  --secondary-color-rgb: #{$secondary-rgb};
+  --accent-color: #10b981;
+  --accent-color-rgb: #{$accent-rgb};
+  --dark-bg: #111827;
+  --dark-bg-rgb: #{$dark-bg-rgb};
+  --light-bg: #f9fafb;
+  --gray-text: #6b7280;
+  --dark-text: #1f2937;
+  --light-text: #f3f4f6;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+  --border-radius: 8px;
+}
