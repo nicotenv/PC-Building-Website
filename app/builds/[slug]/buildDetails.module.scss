@@ -1,0 +1,116 @@
+$primary-rgb: 60, 130, 246;
+$dark-bg-rgb: 17, 24, 39;
+
+// Create a local class that can use the variables
+.container {
+  --local-primary-color: #3c82f6;
+  --local-primary-rgb: #{$primary-rgb};
+  color: var(--local-primary-color);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  h1 {
+    font-size: 2.5rem;
+    color: var(--dark-text);
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+    color: var(--gray-text);
+  }
+}
+
+.content {
+  display: flex;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.imageWrapper {
+  flex: 1;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+
+  .image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.details {
+  flex: 1;
+
+  h2 {
+    font-size: 1.75rem;
+    color: var(--dark-text);
+    margin-bottom: 1rem;
+  }
+
+  .specs {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+
+    .specItem {
+      margin-bottom: 0.5rem;
+
+      strong {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+  }
+
+  .actions {
+    display: flex;
+    gap: 1rem;
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+    }
+
+    .primaryButton {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--border-radius);
+      font-weight: 600;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background-color: var(--secondary-color);
+        transform: translateY(-2px);
+      }
+    }
+
+    .secondaryButton {
+      background-color: transparent;
+      border: 1px solid var(--primary-color);
+      color: var(--primary-color);
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--border-radius);
+      font-weight: 600;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background-color: rgba(var(--primary-color-rgb), 0.1);
+        transform: translateY(-2px);
+      }
+    }
+  }
+}

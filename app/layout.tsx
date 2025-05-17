@@ -3,13 +3,28 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
 import Image from 'next/image'
-
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'BuildMyPC - Custom PC Building Solutions',
-  description: 'Professional custom PC building service for gaming, work, and creative needs',
-}
+  description: 'Professional custom PC building service for gaming, work, and creative needs.',
+  keywords: ['Custom PC', 'PC Building', 'Gaming PC', 'Workstation', 'PC Repair'],
+  openGraph: {
+    title: 'BuildMyPC - Custom PC Building Solutions',
+    description: 'Professional custom PC building service for gaming, work, and creative needs.',
+    url: 'https://www.buildmypc.com',
+    siteName: 'BuildMyPC',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'BuildMyPC Banner',
+      },
+    ],
+    type: 'website',
+  },
+};
 
 export default function RootLayout({
   children,

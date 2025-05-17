@@ -1,10 +1,9 @@
-// Colors with RGB values for transparency
 $primary-rgb: 60, 130, 246; // #3c82f6
 $secondary-rgb: 30, 64, 175; // #1e40af
 $accent-rgb: 16, 185, 129; // #10b981
 $dark-bg-rgb: 17, 24, 39; // #111827
 
-:root {
+:global(:root) {
   --primary-color: #3c82f6;
   --primary-color-rgb: #{$primary-rgb};
   --secondary-color: #1e40af;
